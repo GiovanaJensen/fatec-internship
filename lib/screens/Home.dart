@@ -1,0 +1,43 @@
+import 'package:fatec_internship/components/Header.dart';
+import 'package:fatec_internship/components/vagas/Vagas_card.dart';
+import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Header(title: "Home")),
+      body: Column(
+        children: [
+          VagasCard(),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.abc),
+            label: "News",
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.trip_origin),
+            label: "Vagas",
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.play_arrow),
+            label: "Palestras",
+          ),
+           BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Perfil",
+          ),
+        ]
+      ),
+    );
+  }
+}
