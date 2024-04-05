@@ -1,5 +1,6 @@
 import 'package:fatec_internship/components/Header.dart';
 import 'package:fatec_internship/components/vagas/Vagas_card.dart';
+import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,11 +9,16 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Header(title: "Home")),
-      body: Column(
-        children: [
-          VagasCard(),
-        ],
+      appBar: AppBar(title: Header(title: "Home"), backgroundColor: ThemeColors.backgroundColor,),
+      body: Container(
+        decoration: BoxDecoration(
+          color: ThemeColors.backgroundColor
+        ),
+        child: Column(
+          children: [
+            VagasCard(),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [

@@ -25,7 +25,7 @@ class VagasHeader extends StatelessWidget {
             ],
           ),
         ),
-        Icon(Icons.mark_as_unread)
+        Icon(Icons.bookmark_outline_outlined)
       ],
     );
   }
