@@ -14,7 +14,7 @@ class VagasFooter extends StatelessWidget {
           elevation: 0,
           backgroundColor: ThemeColors.primaryColor,
         ),
-        child: Text("Ver detalhes", style: TextStyle(
+        child: const Text("Ver detalhes", style: TextStyle(
           color: Colors.white,
           fontSize: 10,
           fontWeight: FontWeight.w500

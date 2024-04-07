@@ -1,4 +1,4 @@
-import 'package:fatec_internship/screens/Home.dart';
+import 'package:fatec_internship/screens/home.dart';
 import 'package:fatec_internship/themes/my_theme.dart';
 import 'package:flutter/material.dart';
 
