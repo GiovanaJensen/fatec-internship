@@ -9,19 +9,19 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Header(title: "Home"), backgroundColor: ThemeColors.backgroundColor,),
+      appBar: AppBar(title: const Header(title: "Home"), backgroundColor: ThemeColors.backgroundColor,),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: ThemeColors.backgroundColor
         ),
-        child: Column(
+        child: const Column(
           children: [
             VagasCard(),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.abc),
             label: "News",
