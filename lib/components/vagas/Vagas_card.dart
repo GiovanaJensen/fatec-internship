@@ -8,22 +8,19 @@ class VagasCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(24.0),
-      child: Container(
-        padding: const EdgeInsets.all(24),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8)
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            VagasHeader(empresa: "Google", isFavorito: false,),
-            VagasContent(titulo: "Web Designer/Webflow", local: "SANTOS/SP", minutos: 3,),
-            VagasFooter()
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8)
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          VagasHeader(empresa: "Google", isFavorito: false,),
+          VagasContent(titulo: "Web Designer/Webflow", local: "SANTOS/SP", minutos: 3,),
+          VagasFooter()
+        ],
       ),
     );
   }

@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 ThemeData MyTheme = ThemeData(
   primaryColor: ThemeColors.primaryColor,
   textTheme: const TextTheme(
-    bodyLarge: TextStyle(
+    titleLarge: TextStyle(
       color: ThemeColors.primaryColor,
       fontSize: 24,
       fontWeight: FontWeight.bold,
+    ),
+    bodyLarge: TextStyle(
+      color: ThemeColors.textColor,
+      fontSize: 18
     ),
     bodySmall: TextStyle(
       color: ThemeColors.textColor,
