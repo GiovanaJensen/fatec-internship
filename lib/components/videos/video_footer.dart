@@ -1,14 +1,14 @@
 import 'package:fatec_internship/components/pattern_button.dart';
 import 'package:flutter/material.dart';
 
-class VagasFooter extends StatelessWidget {
-  const VagasFooter({super.key});
+class VideoFooter extends StatelessWidget {
+  const VideoFooter({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Column(
       children: [
-       PatternButton(buttonTitle: "Ver detalhes",),
+        PatternButton(buttonTitle: "Assistir o vídeo",)
       ],
     );
   }
