@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
         children: <Widget>[
           Text(
             title,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           Container(
             decoration: BoxDecoration(

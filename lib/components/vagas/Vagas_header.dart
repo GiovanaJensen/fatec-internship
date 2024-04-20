@@ -31,7 +31,7 @@ class _VagasHeaderState extends State<VagasHeader> {
             ),
             Text(
               widget.empresa,
-              style: TextStyle(fontSize: 14, color: ThemeColors.textColor),
+              style: const TextStyle(fontSize: 14, color: ThemeColors.textColor),
             )
           ],
         ),
@@ -44,8 +44,8 @@ class _VagasHeaderState extends State<VagasHeader> {
               backgroundColor: Colors.white,
             ),
             child: (widget.isFavorito)
-                ? Icon(Icons.bookmark)
-                : Icon(Icons.bookmark_outline_outlined))
+                ? const Icon(Icons.bookmark)
+                : const Icon(Icons.bookmark_outline_outlined))
       ],
     );
   }

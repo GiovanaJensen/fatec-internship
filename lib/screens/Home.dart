@@ -11,15 +11,31 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Header(title: "Home"), backgroundColor: ThemeColors.backgroundColor,),
-      body: Container(
-        decoration: const BoxDecoration(
-          color: ThemeColors.backgroundColor
-        ),
-        child: const Column(
-          children: [
-            SubHeader(),
-            VagasCard(),
-          ],
+      body: Expanded(
+        child: Container(
+          decoration: const BoxDecoration(
+            color: ThemeColors.backgroundColor
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 37.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 30.0),
+                  child: SubHeader(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 38.0),
+                  child: Text("Top últimas vagas", style: Theme.of(context).textTheme.bodyLarge,),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(top: 16.0),
+                  child: VagasCard(),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
