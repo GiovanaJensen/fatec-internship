@@ -1,4 +1,5 @@
 import 'package:fatec_internship/components/Header.dart';
+import 'package:fatec_internship/components/sub_header.dart';
 import 'package:fatec_internship/components/vagas/Vagas_card.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,7 @@ class HomePage extends StatelessWidget {
         ),
         child: const Column(
           children: [
+            SubHeader(),
             VagasCard(),
           ],
         ),
