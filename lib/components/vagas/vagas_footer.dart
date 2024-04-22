@@ -8,18 +8,7 @@ class VagasFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-       ElevatedButton(
-        onPressed: (){},
-        style:ElevatedButton.styleFrom(
-          elevation: 0,
-          backgroundColor: ThemeColors.primaryColor,
-        ),
-        child: const Text("Ver detalhes", style: TextStyle(
-          color: Colors.white,
-          fontSize: 10,
-          fontWeight: FontWeight.w500
-        ),),
-      )
+       
       ],
     );
   }
