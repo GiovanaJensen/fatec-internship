@@ -1,4 +1,5 @@
-import 'package:fatec_internship/components/pattern_button.dart';
+import 'package:fatec_internship/components/botoes/button.dart';
+import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class VideoFooter extends StatelessWidget {
@@ -8,7 +9,7 @@ class VideoFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        PatternButton(buttonTitle: "Assistir o vídeo",)
+        PatternButton(buttonTitle: "Assistir o vídeo", hasDialog: true, bgColor: ThemeColors.primaryColor,)
       ],
     );
   }

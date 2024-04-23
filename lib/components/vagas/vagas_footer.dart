@@ -1,4 +1,5 @@
-import 'package:fatec_internship/components/pattern_button.dart';
+import 'package:fatec_internship/components/botoes/button.dart';
+import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class VagasFooter extends StatelessWidget {
@@ -8,7 +9,7 @@ class VagasFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-       PatternButton(buttonTitle: "Ver detalhes",),
+       PatternButton(buttonTitle: "Ver detalhes", hasDialog: false, bgColor: ThemeColors.primaryColor,),
       ],
     );
   }

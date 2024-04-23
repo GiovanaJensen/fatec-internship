@@ -1,4 +1,5 @@
-import 'package:fatec_internship/components/button.dart';
+import 'package:fatec_internship/components/botoes/button.dart';
+import 'package:fatec_internship/components/botoes/cancel_button.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class DialogBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 PatternButton(buttonTitle: "Continuar", hasDialog: false, bgColor: ThemeColors.primaryColor,),
-                PatternButton(buttonTitle: "Cancelar", hasDialog: false, bgColor: Color.fromRGBO(244, 244, 244, 1))
+                CancelButton(buttonTitle: "Cancelar", bgColor: Color.fromRGBO(244, 244, 244, 1))
               ],
             )
           ],
