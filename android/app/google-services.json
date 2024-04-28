@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "424849999892",
+    "project_id": "fatecinternship",
+    "storage_bucket": "fatecinternship.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424849999892:android:13ff7150fdb1391c7ebf01",
+        "android_client_info": {
+          "package_name": "com.example.fatec_internship"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3GIf39e5eQj0EHedmFdnL-QBWqJzNM6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
