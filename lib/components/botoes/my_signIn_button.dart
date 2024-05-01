@@ -1,3 +1,4 @@
+import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class SignInButton extends StatelessWidget {
@@ -10,17 +11,15 @@ class SignInButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(8),
+          color: ThemeColors.primaryColor,
+          borderRadius: BorderRadius.circular(100),
         ),
         child: Center(
             child: Text(text,
                 style: const TextStyle(
                     color: Colors.white,
-                    fontWeight: FontWeight.bold,
                     fontSize: 16))),
       ),
     );

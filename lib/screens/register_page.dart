@@ -48,6 +48,8 @@ class _RegisterPageState extends State<RegisterPage> {
       }
       // pop the loading cicrcle
       Navigator.pop(context);
+      //when create an account, change to login 
+      Navigator.pushReplacementNamed(context, '/login');
     } on FirebaseAuthException catch (e) {
       // pop the loading cicrcle
       Navigator.pop(context);
