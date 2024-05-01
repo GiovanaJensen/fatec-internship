@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
 
   final passwordController = TextEditingController();
 
-  void onTap(){
+  void onTap() {
     Navigator.pushNamed(context, '/register');
   }
 
@@ -41,6 +41,9 @@ class _LoginPageState extends State<LoginPage> {
       );
       // pop the loading cicrcle
       Navigator.pop(context);
+
+      // show Home Page
+      Navigator.pushReplacementNamed(context, '/home');
     } on FirebaseAuthException catch (e) {
       // pop the loading cicrcle
       Navigator.pop(context);
@@ -60,10 +63,14 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  void voltar(){
+    Navigator.pop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: ThemeColors.backgroundColorOnBoarding,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -74,84 +81,99 @@ class _LoginPageState extends State<LoginPage> {
                   height: 50,
                 ),
                 //logo
-                const Icon(
-                  Icons.lock,
-                  size: 100,
-                ),
-            
+                Image.asset('lib/images/logo-fatec.png'),
                 const SizedBox(
                   height: 50,
                 ),
-                //welcome back, you've been missed
-                const Text(
-                  "welcome back, you\'ve been missed",
-                  style: TextStyle(color: ThemeColors.textColor, fontSize: 16),
-                ),
-            
+
                 const SizedBox(height: 25),
-            
+
                 //username textfield
-                MyTextField(
-                  controller: emailController,
-                  hintText: 'Email',
-                  obscureText: false,
-                ),
-            
-                const SizedBox(
-                  height: 10,
-                ),
-            
-                //password textfield
-                MyTextField(
-                  controller: passwordController,
-                  hintText: "Password",
-                  obscureText: true,
-                ),
-            
-                const SizedBox(height: 10),
-            
-                //forgot password?
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Forgot password?",
-                        style: TextStyle(color: Colors.grey[600]),
+                        "Insira seu email*",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
                     ],
                   ),
                 ),
-            
-                const SizedBox(height: 25),
-            
-                //sign in button
-                SignInButton(
-                  text: "Sign In",
-                  onTap: signUserIn,
-                ),
-            
                 const SizedBox(
-                  height: 50,
+                  height: 16,
                 ),
-            
-                //not a member? register now
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text("Not a member?"),
-                    const SizedBox(width: 4),
-                    GestureDetector(
-                      onTap: onTap,
-                      child: const Text(
-                        " Register now!",
-                        style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
+                MyTextField(
+                  controller: emailController,
+                  hintText: 'EX: seuemail@fatec.sp.gov.br',
+                  obscureText: false,
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Senha de 8 digitos*",
+                        style: TextStyle(color: Colors.white, fontSize: 16),
                       ),
-                    ),
-                  ],
-                )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+
+                //password textfield
+                MyTextField(
+                  controller: passwordController,
+                  hintText: "****************",
+                  obscureText: true,
+                ),
+
+                const SizedBox(height: 10),
+
+                //forgot password?
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Esqueceu a senha?",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 25),
+
+                //sign in button
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                          onTap: voltar,
+                          child: const Text(
+                          'Voltar',
+                          style: TextStyle(color: Colors.white),
+                      )),
+                      SignInButton(
+                        text: "Entrar",
+                        onTap: signUserIn,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

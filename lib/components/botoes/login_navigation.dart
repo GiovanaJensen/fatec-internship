@@ -49,7 +49,7 @@ class _LoginNavigationState extends State<LoginNavigation> {
               borderRadius: BorderRadius.circular(120)),
           child: Text(
             widget.text,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           )),
     );
   }
