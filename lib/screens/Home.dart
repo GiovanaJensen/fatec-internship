@@ -1,4 +1,5 @@
 import 'package:fatec_internship/components/Header.dart';
+import 'package:fatec_internship/components/novidadesSemana.dart';
 import 'package:fatec_internship/components/sub_header.dart';
 import 'package:fatec_internship/components/vagas/Vagas_card.dart';
 import 'package:fatec_internship/components/videos/video_card.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Header(title: "Home"),
         backgroundColor: ThemeColors.backgroundColor,
-        actions: [IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))],
+        actions: [IconButton(onPressed: signUserOut, icon: const Icon(Icons.logout))],
       ),
       body: ListView(children: [
         Expanded(
@@ -36,6 +37,14 @@ class HomePage extends StatelessWidget {
                     padding: EdgeInsets.only(top: 30.0),
                     child: SubHeader(),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 38.0, bottom: 16.0),
+                    child: Text(
+                      "Novidades da semana",
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                  ),
+                  const NovidadesDaSemana(),
                   Padding(
                     padding: const EdgeInsets.only(top: 38.0),
                     child: Text(
