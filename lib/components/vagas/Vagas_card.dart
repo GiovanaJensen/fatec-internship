@@ -4,7 +4,10 @@ import 'package:fatec_internship/components/vagas/Vagas_header.dart';
 import 'package:flutter/material.dart';
 
 class VagasCard extends StatelessWidget {
-  const VagasCard({super.key});
+  final String empresa, caminhoLogoEmpresa, tituloVaga, local;
+  final bool isFavorito;
+  final int minutos;
+  const VagasCard({super.key, required this.empresa, required this.caminhoLogoEmpresa, required this.tituloVaga, required this.local, required this.isFavorito, required this.minutos});
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +20,9 @@ class VagasCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          VagasHeader(empresa: "Google", isFavorito: false,),
-          VagasContent(titulo: "Web Designer/Webflow", local: "SANTOS/SP", minutos: 3,),
-          VagasFooter()
+          VagasHeader(empresa: empresa, isFavorito: isFavorito, caminhoLogoEmpresa: caminhoLogoEmpresa,),
+          VagasContent(titulo: tituloVaga, local: local, minutos: minutos,),
+          const VagasFooter(),
         ],
       ),
     );

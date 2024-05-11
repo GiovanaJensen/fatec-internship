@@ -9,7 +9,11 @@ class VagasFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-       PatternButton(buttonTitle: "Ver detalhes", hasDialog: false, bgColor: ThemeColors.primaryColor,),
+        PatternButton(
+          buttonTitle: "Ver detalhes",
+          hasDialog: false,
+          bgColor: ThemeColors.primaryColor,
+                ),
       ],
     );
   }

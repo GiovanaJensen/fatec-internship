@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
                 children: [
                   const Padding(
                     padding: EdgeInsets.only(top: 30.0),
-                    child: SubHeader(),
+                    child: SubHeader(titulo: "Bem-vindo(a) 👨‍🎓",),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 38.0, bottom: 16.0),
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const Padding(
                     padding: EdgeInsets.only(top: 16.0),
-                    child: VagasCard(),
+                    child: VagasCard(empresa: "Google", caminhoLogoEmpresa: "lib/images/google_icon.png", isFavorito: false, tituloVaga: "Web Designer/Webflow", local: "Santos/SP", minutos: 3,),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 16.0),
