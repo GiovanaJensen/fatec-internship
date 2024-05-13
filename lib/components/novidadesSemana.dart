@@ -1,3 +1,4 @@
+import 'package:fatec_internship/screens/detalhes_produto.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -12,8 +13,11 @@ class _NovidadesDaSemanaState extends State<NovidadesDaSemana> {
   int currentIndex = 0;
   final PageController controller = PageController();
   List<String> images = [
-    "lib/images/oportunidade-exterior.png",
-    "lib/images/vagas-estagio.png",
+    "lib/images/1989.jpg",
+    "lib/images/evermore.png",
+    "lib/images/fearless.png",
+    "lib/images/lover.png",
+    "lib/images/midnights.jpg",
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,13 +35,18 @@ class _NovidadesDaSemanaState extends State<NovidadesDaSemana> {
               },
               itemCount: images.length,
               itemBuilder: (context, index) {
-                return SizedBox(
-                    height: 170,
-                    width: double.infinity,
-                    child: Image.asset(
-                      images[index % images.length],
-                      fit: BoxFit.cover,
-                    ));
+                return GestureDetector(
+                   onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProductDetailsPage(productIndex: index)));
+                },
+                  child: SizedBox(
+                      height: 170,
+                      width: double.infinity,
+                      child: Image.asset(
+                        images[index % images.length],
+                        fit: BoxFit.cover,
+                      )),
+                );
               }),
         ),
         const SizedBox(height: 20),
