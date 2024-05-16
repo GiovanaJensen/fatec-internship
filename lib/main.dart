@@ -2,6 +2,7 @@ import 'package:fatec_internship/screens/auth_page.dart';
 import 'package:fatec_internship/screens/home.dart';
 import 'package:fatec_internship/screens/login_page.dart';
 import 'package:fatec_internship/screens/register_page.dart';
+import 'package:fatec_internship/screens/vagas_page.dart';
 import 'package:fatec_internship/themes/my_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -24,12 +25,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: MyTheme,
-      initialRoute: '/',
+      initialRoute: '/vagas',
       routes: {
         '/': (context) => const AuthPage(),
         '/login': (context) =>  LoginPage(),
         '/register': (context) => RegisterPage(),
         '/home': (context) => const HomePage(),
+        '/vagas': (context) => const VagasPage()
       },
     );
   }

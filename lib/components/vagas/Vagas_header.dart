@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 
 class VagasHeader extends StatefulWidget {
   bool isFavorito;
+  final String caminhoLogoEmpresa;
   final String empresa;
-  VagasHeader({super.key, required this.empresa, required this.isFavorito});
+  VagasHeader({super.key, required this.empresa, required this.caminhoLogoEmpresa,required this.isFavorito});
   @override
   State<VagasHeader> createState() => _VagasHeaderState();
 }
@@ -19,34 +20,29 @@ class _VagasHeaderState extends State<VagasHeader> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Row(
-          children: [
-            Image.network(
-              "https://cdn.icon-icons.com/icons2/2108/PNG/512/google_icon_130924.png",
-              width: 25,
-              height: 25,
-            ),
-            Text(
-              widget.empresa,
-              style: const TextStyle(fontSize: 14, color: ThemeColors.textColor),
-            )
-          ],
-        ),
-        ElevatedButton(
-            onPressed: () {
-              favoritar();
-            },
-            style: ElevatedButton.styleFrom(
-              elevation: 0,
-              backgroundColor: Colors.white,
-            ),
-            child: (widget.isFavorito)
-                ? const Icon(Icons.bookmark)
-                : const Icon(Icons.bookmark_outline_outlined))
-      ],
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Image.network(
+                widget.caminhoLogoEmpresa,
+                width: 25,
+                height: 25,
+              ),
+              const SizedBox(width: 4.5,),
+              Text(
+                widget.empresa,
+                style:
+                    const TextStyle(fontSize: 14, color: ThemeColors.textColor),
+              )
+            ],
+          ),
+          GestureDetector(
+              onTap: favoritar,
+              child: (widget.isFavorito)
+                  ? const Icon(Icons.bookmark)
+                  : const Icon(Icons.bookmark_outline_outlined))
+        ]);
   }
 }
