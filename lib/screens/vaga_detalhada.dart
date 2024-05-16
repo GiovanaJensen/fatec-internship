@@ -2,6 +2,7 @@ import 'package:fatec_internship/components/Header.dart';
 import 'package:fatec_internship/components/sub_header.dart';
 import 'package:fatec_internship/components/types/Vaga.dart';
 import 'package:fatec_internship/components/vagas/vaga_detalhada_content.dart';
+import 'package:fatec_internship/components/vagas/vaga_detalhada_header.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -21,20 +22,18 @@ class VagaDetalhadaPage extends StatelessWidget {
           Expanded(
               child: Container(
             decoration: const BoxDecoration(color: ThemeColors.backgroundColor),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 37.0),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(top: 30.0),
-                    ),
-                    const SizedBox(
-                      height: 46,
-                    ),
-                    VagaDetalhadaContent(vaga: vaga)
-                  ]),
-            ),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(24,30,24,0),
+                    child: VagaDetalhadaHeader(minutos: vaga.minutos, local: vaga.local,),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(24,26,24,0),
+                    child: VagaDetalhadaContent(vaga: vaga),
+                  )
+                ]),
           ))
         ],
       ),

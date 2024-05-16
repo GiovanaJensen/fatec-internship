@@ -9,6 +9,11 @@ ThemeData MyTheme = ThemeData(
       fontSize: 24,
       fontWeight: FontWeight.bold,
     ),
+    titleSmall: TextStyle(
+      color: ThemeColors.textColor,
+      fontSize: 14,
+      fontWeight: FontWeight.bold
+    ),
     bodyLarge: TextStyle(
       color: ThemeColors.textColor,
       fontSize: 18
