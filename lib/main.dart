@@ -1,4 +1,5 @@
 import 'package:fatec_internship/screens/auth_page.dart';
+import 'package:fatec_internship/screens/dicas_page.dart';
 import 'package:fatec_internship/screens/home.dart';
 import 'package:fatec_internship/screens/login_page.dart';
 import 'package:fatec_internship/screens/register_page.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         '/login': (context) =>  LoginPage(),
         '/register': (context) => RegisterPage(),
         '/home': (context) => const HomePage(),
-        '/vagas': (context) => const VagasPage()
+        '/vagas': (context) => const VagasPage(),
+        '/dicas': (context) => const DicasPage()
       },
     );
   }
