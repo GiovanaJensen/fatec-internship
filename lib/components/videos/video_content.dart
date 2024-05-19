@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class VideoContent extends StatelessWidget {
-  const VideoContent({super.key});
+  final String caminhoImagemCanal, nomeDoCanal,tituloVideo;
+  const VideoContent({super.key, required this.caminhoImagemCanal, required this.nomeDoCanal, required this.tituloVideo});
 
   @override
   Widget build(BuildContext context) {
@@ -13,21 +14,21 @@ class VideoContent extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 20,
                 height: 20,
                 child: CircleAvatar(
                     radius: 48, // Image radius
-                    backgroundImage: NetworkImage('https://yt3.ggpht.com/84ALFuw4UCyfL1TyoMU77D-I6xngPjn2X0kbx2bMAyoFzWwR-utcrbDn_MuNJcroPcmU9NdGGQ=s176-c-k-c0x00ffffff-no-rj-mo'),
+                    backgroundImage: NetworkImage(caminhoImagemCanal),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 8.0),
-                child: Text("Rafaella Ballerini", style: Theme.of(context).textTheme.bodySmall,),
+                child: Text(nomeDoCanal, style: Theme.of(context).textTheme.bodySmall,),
               )
             ],
           ),
-          const Text("Como personalizar o seu perfil no Github (Readme)", style: TextStyle(
+          Text(tituloVideo, style: const TextStyle(
             color: Colors.black,
             fontSize: 12,
             fontWeight: FontWeight.bold,

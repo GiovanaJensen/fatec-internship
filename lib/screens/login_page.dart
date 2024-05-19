@@ -1,5 +1,6 @@
 import 'package:fatec_internship/components/botoes/my_signIn_button.dart';
 import 'package:fatec_internship/components/my_textField.dart';
+import 'package:fatec_internship/screens/esqueci_senha.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -140,14 +141,19 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 10),
 
                 //forgot password?
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Esqueceu a senha?",
-                        style: TextStyle(color: Colors.white),
+                      GestureDetector(
+                        onTap: () => {
+                          Navigator.pushReplacementNamed(context, '/esqueci-senha')
+                        },
+                        child: const Text(
+                          "Esqueceu a senha?",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ],
                   ),

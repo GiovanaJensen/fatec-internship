@@ -1,6 +1,10 @@
 import 'package:fatec_internship/screens/auth_page.dart';
+import 'package:fatec_internship/screens/dicas_page.dart';
+import 'package:fatec_internship/screens/esqueci_senha.dart';
 import 'package:fatec_internship/screens/home.dart';
 import 'package:fatec_internship/screens/login_page.dart';
+import 'package:fatec_internship/screens/news.dart';
+import 'package:fatec_internship/screens/perfil.dart';
 import 'package:fatec_internship/screens/register_page.dart';
 import 'package:fatec_internship/screens/vagas_page.dart';
 import 'package:fatec_internship/themes/my_theme.dart';
@@ -25,14 +29,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: MyTheme,
-      initialRoute: '/vagas',
+      initialRoute: '/',
       routes: {
         '/': (context) => const AuthPage(),
         '/login': (context) =>  LoginPage(),
         '/register': (context) => RegisterPage(),
         '/home': (context) => const HomePage(),
-        '/vagas': (context) => const VagasPage()
+        '/vagas': (context) => const VagasPage(),
+        '/dicas': (context) => const DicasPage(),
+        '/esqueci-senha': (context) => EsqueciSenha(),
+        '/news': (context) => const NewsPage(),
+        '/perfil': (context) => const PerfilPage()
       },
     );
   }
+}
+
+class News {
+  const News();
 }

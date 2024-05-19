@@ -1,10 +1,12 @@
+import 'package:fatec_internship/components/types/Dica.dart';
 import 'package:fatec_internship/components/videos/video_content.dart';
 import 'package:fatec_internship/components/videos/video_footer.dart';
 import 'package:fatec_internship/components/videos/video_header.dart';
 import 'package:flutter/material.dart';
 
 class VideoCard extends StatelessWidget {
-  const VideoCard({super.key});
+  final Dica dica;
+  const VideoCard({super.key, required this.dica});
 
   @override
   Widget build(BuildContext context) {
@@ -14,11 +16,11 @@ class VideoCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8)
       ),
-      child: const Column(
+      child: Column(
         children: [
-          VideoHeader(),
-          VideoContent(),
-          VideoFooter(),
+          VideoHeader(caminhoImagem: dica.caminhoImagem,),
+          VideoContent(caminhoImagemCanal: dica.caminhoDaFotoDoCanal, nomeDoCanal: dica.nomeDoCanal, tituloVideo: dica.titulo,),
+          const VideoFooter(),
         ],
       ),
     );

@@ -1,6 +1,7 @@
 import 'package:fatec_internship/components/Header.dart';
 import 'package:fatec_internship/components/novidadesSemana.dart';
 import 'package:fatec_internship/components/sub_header.dart';
+import 'package:fatec_internship/components/types/Dica.dart';
 import 'package:fatec_internship/components/vagas/Vagas_card.dart';
 import 'package:fatec_internship/components/videos/video_card.dart';
 import 'package:fatec_internship/themes/theme_colors.dart';
@@ -63,9 +64,14 @@ class HomePage extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 16.0),
-                    child: VideoCard(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16.0),
+                    child: VideoCard(dica: Dica(
+                    caminhoImagem: "lib/images/video_thumb.png",
+                    nomeDoCanal: "Rafaella Ballerini",
+                    caminhoDaFotoDoCanal: "https://yt3.ggpht.com/84ALFuw4UCyfL1TyoMU77D-I6xngPjn2X0kbx2bMAyoFzWwR-utcrbDn_MuNJcroPcmU9NdGGQ=s176-c-k-c0x00ffffff-no-rj-mo",
+                    titulo: "Como personalizar o seu perfil no Github (Readme)",
+                ),),
                   )
                 ],
               ),
