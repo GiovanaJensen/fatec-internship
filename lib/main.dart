@@ -5,6 +5,7 @@ import 'package:fatec_internship/screens/home.dart';
 import 'package:fatec_internship/screens/login_page.dart';
 import 'package:fatec_internship/screens/news.dart';
 import 'package:fatec_internship/screens/onboarding.dart';
+import 'package:fatec_internship/screens/profile_page.dart';
 import 'package:fatec_internship/screens/register_page.dart';
 import 'package:fatec_internship/screens/vagas_page.dart';
 import 'package:fatec_internship/themes/my_theme.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/dicas': (context) => const DicasPage(),
         '/esqueci-senha': (context) => EsqueciSenha(),
         '/news': (context) => const NewsPage(),
+        '/perfil': (context) => const ProfilePage()
       },
     );
   }
