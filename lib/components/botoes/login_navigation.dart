@@ -16,7 +16,7 @@ class _LoginNavigationState extends State<LoginNavigation> {
     if (widget.isLogin) {
       Navigator.pushNamed(context, "/login");
     } else {
-      Navigator.pushNamed(context, '/register');
+      Navigator.pushNamed(context, '/onboarding');
     }
   }
 
